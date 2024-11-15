@@ -51,12 +51,27 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          Navigator.pushNamed(context, '/add_meal');
-        },
-      ),
+      floatingActionButton: Column(
+  mainAxisAlignment: MainAxisAlignment.end,
+  children: [
+    FloatingActionButton(
+      child: Icon(Icons.add),
+      onPressed: () {
+        Navigator.pushNamed(context, '/add_meal');
+      },
+      tooltip: 'Log a Meal',
+    ),
+    SizedBox(height: 16),
+    FloatingActionButton(
+      child: Icon(Icons.fitness_center),
+      onPressed: () {
+        Navigator.pushNamed(context, '/bmi_input');
+      },
+      tooltip: 'Calculate BMI',
+    ),
+  ],
+),
+
     );
   }
 }

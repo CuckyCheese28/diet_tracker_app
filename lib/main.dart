@@ -6,6 +6,7 @@ import 'providers/diet_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/add_meal_screen.dart';
 import 'screens/settings_screen.dart';
+import 'screens/bmi_input_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => HomeScreen(),
           '/add_meal': (context) => AddMealScreen(),
           '/settings': (context) => SettingsScreen(),
+          '/bmi_input': (context) => BMIInputScreen(),
         },
       ),
     );
